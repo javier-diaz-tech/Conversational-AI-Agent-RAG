@@ -1,0 +1,6 @@
+@ApiAgenteConversacional_HostAddress = http://localhost:5179
+
+GET {{ApiAgenteConversacional_HostAddress}}//
+Accept: application/json
+
+###
