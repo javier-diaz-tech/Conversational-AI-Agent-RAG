@@ -148,3 +148,9 @@ https://youtu.be/c_vG2MsYkoI
 Javier Díaz
 
 Software Developer | .NET | IA Generativa | Semantic Kernel | AWS
+
+## Licencia
+ 
+Todos los derechos reservados.
+ 
+Este repositorio se publica con fines educativos y de demostración profesional. El uso, distribución o comercialización de su contenido requiere autorización expresa del autor.
