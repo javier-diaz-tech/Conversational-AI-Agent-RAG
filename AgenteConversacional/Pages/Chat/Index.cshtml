@@ -13,7 +13,7 @@
             <div id="chat-messages" class="row card shadow-lg m-4 border border-dark border-2 rounded-4 overflow-hidden"
                  style="width: 560px; height: 300px; z-index: 1051;">          
 
-               <div class="card-body overflow-auto bg-light d-flex flex-column gap-3 p-3" style="background-color:gray">
+               <div class="card-body overflow-auto bg-light d-flex flex-column gap-3 p-3" style="background-color:gray" id="chat-body">
                         
                     @foreach (var respuesta in Model.RespuestaAgente)
                     {
@@ -138,6 +138,20 @@
                                 </div>`;
             });
         }
+
+        function scrollToBottom() {
+
+            var chat =
+                document.getElementById("chat-body");
+
+            if (chat) {
+                chat.scrollTop = chat.scrollHeight;
+            }
+        }
+
+        window.onload = function () {
+            scrollToBottom();
+        };
     </script>
  </body>
          

@@ -20,8 +20,7 @@ namespace ApiAgenteConversacional.AgenteConversacional.Aplicacion
             _agenteService = agenteService;
             _memoryCache = memoryCache;
         }
-        IEmbeddingGenerator<string, Embedding<float>> embeddingGenerator;
-        VectorStoreCollection<Guid,DocumentoRagModel> collection;
+       
 
         public async Task<IReadOnlyList<MensajeChatModel>> GenerarRespuestaAgente(string sessionId, string mensajeUsuario)
         {
@@ -151,13 +150,7 @@ namespace ApiAgenteConversacional.AgenteConversacional.Aplicacion
             return chatHistory;
         }
 
-        /// <summary>
-        /// Método para indexar (guardar) documentos locales recientes
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="text"></param>
-        /// <param name="description"></param>
-        /// <returns></returns>
+       
         public async Task<DocumentoActual> IngestDocumentosParaRAG_Async(string texto, string nombreDocumento)
         {
             var documentoActual = await _agenteService.GuardarDocumentoFragmentoAsync(texto, nombreDocumento);
